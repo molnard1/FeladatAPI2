@@ -47,7 +47,7 @@ namespace FeladatAPI.Controllers
         }
 
         // PUT api/<NationalityController>/5
-        [HttpPut("{id}")]
+        [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(int id, string value)
         {
             var nationality = await context.Nationalities.FindAsync(id);
@@ -63,7 +63,7 @@ namespace FeladatAPI.Controllers
         }
 
         // DELETE api/<NationalityController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
             var nationality = await context.Nationalities.FindAsync(id);
