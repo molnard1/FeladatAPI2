@@ -63,7 +63,7 @@ namespace FeladatAPI.Controllers
             return NoContent();
         }
 
-        [HttpGet("/nationality/{nationality:guid}")]
+        [HttpGet("nationality/{nationality:guid}")]
         public async Task<ActionResult<GetAuthorResponse>> GetByNat(Guid nationality)
         {
             var author = await context.Authors.Where(x => x.NationalityId == nationality).ToListAsync();
